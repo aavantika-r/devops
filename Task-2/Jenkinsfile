@@ -6,16 +6,17 @@ pipeline {
     }
 
     stages {
+
         stage('Build') {
             steps {
-                bat '"%DOCKER%" build -t task2-node-app .'
+                bat '"%DOCKER%" build -t task2-node-app Task-2'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'npm install'
-                bat 'npm test'
+                bat 'cd Task-2 && npm install'
+                bat 'cd Task-2 && npm test'
             }
         }
 
