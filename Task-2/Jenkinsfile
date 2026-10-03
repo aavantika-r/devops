@@ -1,10 +1,14 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKER = 'C:\\Users\\aavan\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe'
+    }
+
     stages {
         stage('Build') {
             steps {
-                bat 'docker build -t task2-node-app .'
+                bat '"%DOCKER%" build -t task2-node-app .'
             }
         }
 
@@ -17,8 +21,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                bat 'docker rm -f task2-node-app || exit /b 0'
-                bat 'docker run -d --name task2-node-app -p 3000:3000 task2-node-app'
+                bat '"%DOCKER%" rm -f task2-node-app || exit /b 0'
+                bat '"%DOCKER%" run -d --name task2-node-app -p 3000:3000 task2-node-app'
             }
         }
     }
