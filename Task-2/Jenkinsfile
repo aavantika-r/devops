@@ -4,19 +4,21 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build stage'
+                bat 'docker build -t task2-node-app .'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Test stage'
+                bat 'npm install'
+                bat 'npm test'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploy stage'
+                bat 'docker rm -f task2-node-app || exit /b 0'
+                bat 'docker run -d --name task2-node-app -p 3000:3000 task2-node-app'
             }
         }
     }
