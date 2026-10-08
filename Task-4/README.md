@@ -1,60 +1,28 @@
-# Task 4 - Git Version Control
+# Task 4 – Git Version Control
 
-\# Task 4 – Git Version Control
-
-
-
-\## Objective
-
-
+## Objective
 
 Manage a DevOps project using Git and GitHub best practices.
 
+## Git Workflow
 
+* Main branch
+* Dev branch
+* Feature branch
+* Pull Request for merging
 
-\## Git Workflow
+## Git Best Practices
 
+* Meaningful commits
+* `.gitignore`
+* Git tags
+* Markdown documentation
 
+## Tools Used
 
-\* Main branch
+* Git
+* GitHub
 
-\* Dev branch
-
-\* Feature branch
-
-\* Pull Request for merging
-
-
-
-\## Git Best Practices
-
-
-
-\* Meaningful commits
-
-\* `.gitignore`
-
-\* Git tags
-
-\* Markdown documentation
-
-
-
-\## Tools Used
-
-
-
-\* Git
-
-\* GitHub
-
-
-
-\## Result
-
-
+## Result
 
 Successfully created a version-controlled DevOps project using Git branching and GitHub workflow.
-
-
-
